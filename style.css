@@ -1,0 +1,245 @@
+/* ===== Base ===== */
+:root {
+  --bg: #fdfdfc;
+  --text: #1d232a;
+  --muted: #5c6670;
+  --accent: #6b4fbb;
+  --accent-soft: #efeaf9;
+  --border: #e4e2de;
+  --card: #ffffff;
+  --max-width: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --text: #e8e6e3;
+    --muted: #9aa3ad;
+    --accent: #a68eea;
+    --accent-soft: #2a2440;
+    --border: #2c2f33;
+    --card: #1c1f23;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Charter", "Georgia", "Cambria", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ===== Nav ===== */
+nav {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-name {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-right: auto;
+}
+.nav-name:hover { text-decoration: none; color: var(--accent); }
+
+nav a.nav-link {
+  color: var(--muted);
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+nav a.nav-link:hover, nav a.nav-link.active { color: var(--accent); text-decoration: none; }
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 3rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero-text .tagline {
+  color: var(--muted);
+  margin-bottom: 0.85rem;
+}
+
+.hero-text p { margin-bottom: 0.75rem; }
+
+/* ===== Profile links ===== */
+.profile-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.profile-links a {
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+.profile-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ===== Sections ===== */
+section { padding: 1.5rem 0; }
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+
+/* ===== News ===== */
+.news-list { list-style: none; }
+.news-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.news-date {
+  color: var(--muted);
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding-top: 0.15rem;
+  min-width: 5.5rem;
+}
+
+/* ===== Publications ===== */
+.pub {
+  margin-bottom: 1.25rem;
+}
+.pub .pub-title { font-weight: bold; }
+.pub .pub-authors { color: var(--muted); font-size: 0.95rem; }
+.pub .pub-venue { font-style: italic; font-size: 0.95rem; }
+.pub .pub-links {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.pub .pub-links a {
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.pub .pub-links a:hover { border-color: var(--accent); text-decoration: none; }
+
+/* ===== Cards (projects) ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.card p { color: var(--muted); font-size: 0.95rem; margin: 0.4rem 0 0.6rem; }
+.card .card-links { display: flex; gap: 0.75rem; }
+.card .card-links a {
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+/* ===== Misc page ===== */
+.misc-intro { padding-top: 2.5rem; }
+.misc-intro h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.misc-intro p { color: var(--muted); }
+
+.audio-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.85rem;
+}
+.audio-item .audio-note { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.placeholder {
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  color: var(--muted);
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .hero { flex-direction: column; align-items: center; text-align: center; }
+  .profile-links { justify-content: center; }
+  .news-list li { flex-direction: column; gap: 0; }
+}
