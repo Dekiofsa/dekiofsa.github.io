@@ -7,7 +7,7 @@
   --accent-soft: #efeaf9;
   --border: #e4e2de;
   --card: #ffffff;
-  --max-width: 760px;
+  --max-width: 980px;
 }
 
 @media (prefers-color-scheme: dark) {
