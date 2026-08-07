@@ -102,7 +102,7 @@ nav a.nav-link:hover, nav a.nav-link.active { color: var(--accent); text-decorat
 
 .hero-text h1 {
   font-size: 2rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-text .tagline {
