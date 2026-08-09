@@ -197,6 +197,12 @@ h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
   border-radius: 8px;
   padding: 1.25rem;
 }
+.card .card-date {
+  color: var(--muted);
+  font-family: "Avenir", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+}
 .card p { color: var(--muted); font-size: 0.95rem; margin: 0.4rem 0 0.6rem; }
 .card .card-links { display: flex; gap: 0.75rem; }
 .card .card-links a {
